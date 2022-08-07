@@ -9,9 +9,9 @@ import { ForecastService } from 'src/app/_services/forecast.service';
 export class ForecastComponent implements OnInit {
 
   constructor(private forecastservice: ForecastService) { }
-
+  
   ngOnInit(): void {
-    this.forecastservice.getCurrentLocation().subscribe((data) => {
+    this.forecastservice.getForecast().subscribe((data:any) => {
       console.log(data)
     })
   }
